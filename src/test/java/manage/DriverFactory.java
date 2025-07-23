@@ -41,35 +41,36 @@ public class DriverFactory {
 
 		switch (browser.toLowerCase()) {
 			case "chrome":
-				System.setProperty("webdriver.chrome.driver", "src/test/GRID/BrowsersDrivers/chromedriver.exe");
+				System.setProperty("webdriver.chrome.driver", "src/test/Grid/BrowserDrivers/chromedriver.exe");
 				ChromeOptions chromeOptions = new ChromeOptions();
 				driver = new ChromeDriver(chromeOptions);
 				System.out.println("***** Local Chrome Driver *****");
 				break;
 
 			case "firefox":
-				System.setProperty("webdriver.gecko.driver", "src/test/GRID/BrowsersDrivers/geckodriver.exe");
+				System.setProperty("webdriver.gecko.driver", "src/test/Grid/BrowserDrivers/geckodriver.exe");
 				FirefoxOptions firefoxOptions = new FirefoxOptions();
 				driver = new FirefoxDriver(firefoxOptions);
 				System.out.println("***** Local Firefox Driver *****");
 				break;
 
 			case "edge":
-				System.setProperty("webdriver.edge.driver", "src/test/GRID/BrowsersDrivers/msedgedriver.exe");
+				System.setProperty("webdriver.edge.driver", "src/test/Grid/BrowserDrivers/msedgedriver.exe");
 				EdgeOptions edgeOptions = new EdgeOptions();
 				driver = new EdgeDriver(edgeOptions);
 				System.out.println("***** Local Edge Driver *****");
 				break;
 
 			case "ie":
-				System.setProperty("webdriver.ie.driver", "src/test/GRID/BrowsersDrivers/IEDriverServer.exe");
+				System.setProperty("webdriver.ie.driver", "src/test/Grid/BrowserDrivers/IEDriverServer.exe");
 				InternetExplorerOptions ieOptions = new InternetExplorerOptions();
 				driver = new InternetExplorerDriver(ieOptions);
 				System.out.println("***** Local IE Driver *****");
 				break;
 
+
 			default:
-				throw new IllegalArgumentException("Browser bulunamadi");
+				throw new IllegalArgumentException("Browser ismi bulunamadi");
 
 		}
 
